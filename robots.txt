@@ -1,0 +1,23 @@
+# robots.txt for Mariden Resort & Homestay Siargao
+# https://www.maridenresort.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Block menu page (internal use only)
+Disallow: /menu.html
+Disallow: /menu
+Disallow: /documents/menu.html
+
+# Block development/documentation folders if accidentally deployed
+Disallow: /FOR CLOUDFLARE PRODUCTION/
+Disallow: /DOCUMENTATION/
+Disallow: /_archive/
+Disallow: /node_modules/
+
+# Block source files (only minified versions should be crawled)
+Disallow: /js/
+Disallow: /css/
+
+# Sitemap location
+Sitemap: https://www.maridenresort.com/sitemap.xml

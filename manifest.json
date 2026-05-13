@@ -1,0 +1,33 @@
+{
+  "name": "Mariden Resort & Homestay Siargao",
+  "short_name": "Mariden Resort",
+  "description": "A peaceful pool resort near Siargao Airport. Family-run accommodation in Del Carmen, Siargao.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#FFA500",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/general/mariden-fav.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/general/mariden-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/general/mariden-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["travel", "hospitality", "accommodation"],
+  "lang": "en-PH",
+  "dir": "ltr"
+}

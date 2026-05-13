@@ -1,0 +1,1 @@
+var e=(o,a)=>()=>(a||o((a={exports:{}}).exports,a),a.exports);import{initGuideMap as l}from"../guide-map.js";var n=e(()=>{l("sugba-lagoon-map","Del Carmen Port",{label:"Del Carmen Port",boatTo:{lat:9.90656386356479,lng:125.90028671809853,name:"Sugba Lagoon"}})});export default n();

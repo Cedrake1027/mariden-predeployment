@@ -1,0 +1,53 @@
+# Cloudflare Pages Redirect Rules
+
+# https://developers.cloudflare.com/pages/platform/redirects/
+
+# ========================================
+
+# CANONICAL DOMAIN REDIRECT (SEO OPTIMIZED)
+
+# ========================================
+
+# Send all non-www traffic directly to the canonical www HTTPS version
+
+http://maridenresort.com/* https://www.maridenresort.com/:splat 301
+https://maridenresort.com/* https://www.maridenresort.com/:splat 301
+http://www.maridenresort.com/* https://www.maridenresort.com/:splat 301
+
+# ========================================
+
+# CLEAN URL REDIRECTS (OPTIONAL)
+
+# ========================================
+
+# Only use if you want clean URLs instead of .html files
+
+# /about.html /about 301
+
+# /rooms.html /rooms 301
+
+# /contact.html /contact 301
+
+# /faq.html /faq 301
+
+# /amenities.html /amenities 301
+
+# /gallery.html /gallery 301
+
+# ========================================
+
+# LEGACY URL REDIRECTS
+
+# ========================================
+
+# Example for old pages if needed
+
+# /old-booking https://bookingku.bookandlink.com/booking-page.php?id=mariden-resort-homestay-siargao 301
+
+# ========================================
+
+# CUSTOM 404 PAGE
+
+# ========================================
+
+/* /404.html 404

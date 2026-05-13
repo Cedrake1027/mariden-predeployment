@@ -1,0 +1,1 @@
+const t={lat:9.837036134407692,lng:126.01933895888156};export{t as MARIDEN};

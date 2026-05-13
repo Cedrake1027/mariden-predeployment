@@ -1,0 +1,64 @@
+# Cloudflare Pages HTTP Security Headers
+# https://developers.cloudflare.com/pages/platform/headers/
+
+# ========================================
+# GLOBAL SECURITY HEADERS
+# ========================================
+
+/*
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Permissions-Policy: geolocation=(self), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=(), autoplay=(), encrypted-media=(), fullscreen=(self), picture-in-picture=()
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Resource-Policy: same-origin
+Origin-Agent-Cluster: ?1
+Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://*.googletagmanager.com https://static.cloudflareinsights.com https://*.cloudflareinsights.com https://www.google-analytics.com https://maps.googleapis.com https://*.googleapis.com https://www.clarity.ms https://c.bing.com https://*.clarity.ms https://googleads.g.doubleclick.net https://www.googleadservices.com https://www.google.com https://www.google.com.ph https://pagead2.googlesyndication.com https://tpc.googlesyndication.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: https://www.google-analytics.com https://*.google-analytics.com https://googleads.g.doubleclick.net https://www.google.com https://www.google.com.ph; connect-src 'self' https://*.maridenresort.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.googletagmanager.com https://*.g.doubleclick.net https://googleads.g.doubleclick.net https://*.google.com https://pagead2.googlesyndication.com https://cloudflareinsights.com https://*.cloudflareinsights.com https://static.cloudflareinsights.com https://maps.googleapis.com https://*.googleapis.com https://www.clarity.ms https://c.bing.com https://*.clarity.ms https://www.googleadservices.com https://www.google.com.ph https://tpc.googlesyndication.com; frame-src 'self' https://www.google.com https://maps.google.com https://bookingku.bookandlink.com https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.googleadservices.com https://tpc.googlesyndication.com; base-uri 'self'; form-action 'self' https://*.maridenresort.com; object-src 'none'; frame-ancestors 'self'; upgrade-insecure-requests;
+
+# ========================================
+# CACHING STRATEGY
+# ========================================
+
+/*.css
+Cache-Control: public, max-age=2592000, must-revalidate
+
+/*.js
+Cache-Control: public, max-age=2592000, must-revalidate
+
+/*.webp
+Cache-Control: public, max-age=2592000, immutable
+
+/*.png
+Cache-Control: public, max-age=2592000, immutable
+
+/*.svg
+Cache-Control: public, max-age=2592000, immutable
+
+/*.jpg
+Cache-Control: public, max-age=2592000, immutable
+
+/*.jpeg
+Cache-Control: public, max-age=2592000, immutable
+
+/*.html
+Cache-Control: public, max-age=3600, must-revalidate
+
+/sw.js
+Cache-Control: public, max-age=0, must-revalidate
+
+/manifest.json
+Cache-Control: public, max-age=604800, must-revalidate
+
+/routes.json
+Cache-Control: public, max-age=3600, must-revalidate
+
+# ========================================
+# SEARCH ENGINE CONTROL
+# ========================================
+
+https://:project.pages.dev/*
+X-Robots-Tag: noindex
+
+https://:version.:project.pages.dev/*
+X-Robots-Tag: noindex
